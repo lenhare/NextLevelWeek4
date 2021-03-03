@@ -8,6 +8,7 @@ import { ChallengeBox } from "../components/ChallengeBox";
 import styles from "../styles/pages/Home.module.css";
 import { CountdownProvider } from "../contexts/CountdowContext";
 import { ChallengesProvider } from "../contexts/ChallengesContext";
+import { Menu } from "../components/Menu";
 
 interface HomeProps {
   level: number;
@@ -15,7 +16,6 @@ interface HomeProps {
   challengesCompleted: number;
 }
 export default function Home(props) {
-  console.log(props);
   return (
     <ChallengesProvider
       level={props.level}
@@ -27,6 +27,7 @@ export default function Home(props) {
           <title>Moveit</title>
         </Head>
         <ExperienceBar />
+        <Menu />
 
         <CountdownProvider>
           <section>
